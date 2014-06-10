@@ -1,0 +1,28 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/0.10.24/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'init' ]
+2 info using npm@1.3.21
+3 info using node@v0.10.24
+4 silly package data undefined
+5 info init written successfully
+6 error Error: canceled
+6 error     at Interface.<anonymous> (/usr/local/Cellar/node/0.10.24/lib/node_modules/npm/node_modules/read/lib/read.js:66:13)
+6 error     at Interface.EventEmitter.emit (events.js:92:17)
+6 error     at Interface._ttyWrite (readline.js:620:16)
+6 error     at ReadStream.onkeypress (readline.js:99:10)
+6 error     at ReadStream.EventEmitter.emit (events.js:98:17)
+6 error     at emitKey (readline.js:1095:12)
+6 error     at ReadStream.onData (readline.js:840:14)
+6 error     at ReadStream.EventEmitter.emit (events.js:95:17)
+6 error     at ReadStream.<anonymous> (_stream_readable.js:746:14)
+6 error     at ReadStream.EventEmitter.emit (events.js:92:17)
+7 error If you need help, you may report this *entire* log,
+7 error including the npm and node versions, at:
+7 error     <http://github.com/isaacs/npm/issues>
+8 error System Darwin 13.2.0
+9 error command "/usr/local/Cellar/node/0.10.24/bin/node" "/usr/local/bin/npm" "init"
+10 error cwd /Users/jason/dev/projects/git-clone
+11 error node -v v0.10.24
+12 error npm -v 1.3.21
+13 verbose exit [ 1, true ]
