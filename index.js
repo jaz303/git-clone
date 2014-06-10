@@ -20,7 +20,7 @@ module.exports = function(repo, targetPath, opts, cb) {
     args.push(repo);
     args.push(targetPath);
 
-    var process = spawn('git', args);
+    var process = spawn(opts.git || 'git', args);
 
     process.on('close', function(status) {
         if (status == 0) {

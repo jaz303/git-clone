@@ -1,6 +1,6 @@
 # git-clone
 
-Clone a git repository.
+Clone a git repository via shell command.
 
 ## Installation
 
@@ -20,7 +20,8 @@ Clone `repo` to `targetPath`, calling `cb` on completion.
 
 Supported `options`:
 
-  * `shallow`: when `true`, clone with depth 1
+  * `git`: path to `git` binary; default: `git`.
+  * `shallow`: when `true`, clone with depth 1.
 
 ## Copyright &amp; License
 
