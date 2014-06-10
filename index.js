@@ -2,6 +2,11 @@ var spawn = require('child_process').spawn;
 
 module.exports = function(repo, targetPath, opts, cb) {
 
+    if (typeof opts === 'function') {
+        cb = opts;
+        opts = null;
+    }
+
     opts = opts || {};
 
     var args = ['clone'];
