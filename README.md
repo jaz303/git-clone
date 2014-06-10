@@ -20,7 +20,7 @@ Clone `repo` to `targetPath`, calling `cb` on completion.
 
 Supported `options`:
 
-  * `shallow`: clone with depth of 1
+  * `shallow`: when `true`, clone with depth 1
 
 ## Copyright &amp; License
 
