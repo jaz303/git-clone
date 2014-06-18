@@ -24,9 +24,9 @@ module.exports = function(repo, targetPath, opts, cb) {
 
     process.on('close', function(status) {
         if (status == 0) {
-            cb();
+            cb && cb();
         } else {
-            cb(new Error("'git clone' failed with status " + status));
+            cb && cb(new Error("'git clone' failed with status " + status));
         }
     });
 
