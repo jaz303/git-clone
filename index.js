@@ -29,5 +29,13 @@ module.exports = function(repo, targetPath, opts, cb) {
             cb && cb(new Error("'git clone' failed with status " + status));
         }
     });
+    
+    process.stdout.on('data', function(data) {
+        console.log(data.toString());
+    });
+
+    process.stderr.on('data', function(data) {
+        console.error(data.toString());
+    });
 
 }
