@@ -20,8 +20,9 @@ Clone `repo` to `targetPath`, calling `cb` on completion.
 
 Supported `options`:
 
-  * `git`: path to `git` binary; default: `git`.
-  * `shallow`: when `true`, clone with depth 1.
+  * `git`: path to `git` binary; default: `git` (optional).
+  * `shallow`: when `true`, clone with depth 1 (optional).
+  * `checkout`: revision/branch/tag to check out (optional).
 
 ## Copyright &amp; License
 
