@@ -2,7 +2,7 @@
   "name": "git-clone",
   "version": "0.1.0",
   "description": "Clone a git repository",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/jaz303/git-clone/issues"
   },
-  "homepage": "https://github.com/jaz303/git-clone"
+  "homepage": "https://github.com/jaz303/git-clone",
+  "dependencies": {
+    "es6-promisify": "^6.0.0"
+  }
 }

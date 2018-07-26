@@ -12,11 +12,15 @@ Require:
 
 	var clone = require('git-clone');
 
+For promise:
+
+	var clone = require('git-clone/promise');
+
 ## API
 
 #### `clone(repo, targetPath, [options], cb)`
 
-Clone `repo` to `targetPath`, calling `cb` on completion.
+Clone `repo` to `targetPath`, calling `cb` on completion (or resolving the promise).
 
 Supported `options`:
 
