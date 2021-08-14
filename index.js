@@ -1,4 +1,9 @@
-var spawn = require('child_process').spawn;
+const {
+    buildCloneCommand,
+    buildCheckoutCommand
+} = require('./private/util');
+
+const spawn = require('child_process').spawn;
 
 module.exports = function(repo, targetPath, opts, cb) {
 
@@ -9,20 +14,9 @@ module.exports = function(repo, targetPath, opts, cb) {
 
     opts = opts || {};
 
-    var git = opts.git || 'git';
-    var args = ['clone'];
-
-    if (opts.shallow) {
-        args.push('--depth');
-        args.push('1');
-    }
-
-    args.push('--');
-    args.push(repo);
-    args.push(targetPath);
-
-    var process = spawn(git, args);
-    process.on('close', function(status) {
+    const [cmd, args] = buildCloneCommand(repo, targetPath, opts);
+    const proc = spawn(cmd, args);
+    proc.on('close', (status) => {
         if (status == 0) {
             if (opts.checkout) {
                 _checkout();
@@ -35,9 +29,9 @@ module.exports = function(repo, targetPath, opts, cb) {
     });
 
     function _checkout() {
-        var args = ['checkout', opts.checkout];
-        var process = spawn(git, args, { cwd: targetPath });
-        process.on('close', function(status) {
+        const [cmd, args] = buildCheckoutCommand(opts.checkout, opts);
+        const proc = spawn(cmd, args, { cwd: targetPath });
+        proc.on('close', function(status) {
             if (status == 0) {
                 cb && cb();
             } else {
