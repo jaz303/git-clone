@@ -1,9 +1,7 @@
-const impl = require('./index');
+const impl = require('./private/impl');
 
 module.exports = function(repo, targetPath, opts) {
     return new Promise((yes, no) => {
-        impl(repo, targetPath, opts, (err) => {
-            err ? no(err) : yes();
-        });
+        impl(repo, targetPath, opts || {}, yes, no);
     });
 }
