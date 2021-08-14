@@ -8,11 +8,11 @@ Install:
 
     $ npm install git-clone
 
-To use the standard callback-based API:
+To use the original callback-based API:
 
     const clone = require('git-clone');
 
-And for use with `async`/`await` there's also a promise-based version:
+As of 0.2.0 there's a promised-based API for use with `async`/`await`:
 
     const clone = require('git-clone/promise');
 
