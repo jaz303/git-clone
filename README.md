@@ -39,7 +39,7 @@ Clone `repo` to `targetPath`, throwing an exception on failure.
 
 ## Contributors
 
-  - [https://github.com/AntiMoron](AntiMoron)
+  - [AntiMoron](https://github.com/AntiMoron)
 
 ## Copyright &amp; License
 
