@@ -25,6 +25,9 @@ As of 0.2.0 there's a promised-based API for use with `async`/`await`:
   * `checkout`: revision/branch/tag to check out after clone
   * `args`: additional array of arguments to pass to `git clone`
 
+**NOTE:** the `args` option allows arbitrary arguments to be passed to `git`; this is inherently insecure if used in
+combination with untrusted input. **Only use the `args` option with static/trusted input!**
+
 ## Callback
 
 #### `clone(repo, targetPath, [options], cb)`
