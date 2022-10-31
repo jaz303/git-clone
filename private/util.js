@@ -13,6 +13,10 @@ exports.buildCloneCommand = function(repo, targetPath, opts) {
 		args.push('--depth', '1');
 	}
 
+	if (opts.progress) {
+		args.push('--progress');
+	}
+
 	args = args.concat(userArgs);
 	args.push('--', repo, targetPath);
 
